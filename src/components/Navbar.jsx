@@ -1,5 +1,9 @@
+import appLogo from '../assets/airbnb-logo.svg'
+
 export default function Navbar() {
     return (
-        <h1>Navbar goes here</h1>
+        <nav>
+            <img src={appLogo} className="logo" alt="AirBnB logo" />
+        </nav>
     )
 }
