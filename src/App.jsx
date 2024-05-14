@@ -1,16 +1,25 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Airbnb from "./pages/Airbnb";
+import Meme from "./pages/Meme";
+
 import './App.css'
 
 import Navbar from './components/Navbar'
-import Content from './components/Content'
-import Hero from './components/Hero'
 
 function App() {
 
   return (
     <>
+      <BrowserRouter>
       <Navbar></Navbar>
-      <Hero></Hero>
-      <Content></Content>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route index element={<Home />} />
+          <Route path="airbnb" element={<Airbnb />} />
+          <Route path="meme" element={<Meme />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
