@@ -5,7 +5,7 @@ import Meme from "./pages/Meme";
 
 import './App.css'
 
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
 

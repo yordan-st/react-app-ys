@@ -1,0 +1,88 @@
+nav {
+    z-index: 999;
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    gap: 4px;
+    padding: 8px;
+    background-color: var(--primary-900);
+    border-radius: 100px;
+    border: 1px solid var(--primary-600);
+}
+.nav-item {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    padding: 12px;
+    color: white;
+    border-radius: 100px;
+    transition: all 250ms;
+    display: flex;
+    position: relative;
+}
+nav .nav-item:hover {
+    background-color: var(--primary-700);
+    transform: scale(1.1);
+    transform: translateY(-2px);
+}
+.nav-item.active:hover::after {
+    display: none;
+}
+.nav-item.active::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary-500);
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 100px;
+}
+
+.tooltip-top {
+    position: absolute;
+    padding: 0px 6px;
+    top: -28px;
+    left: -100px;
+    right: -100px;
+    margin: auto;
+    width: max-content;
+    color:#ffffff;
+    background-color:var(--primary-700);
+    border: 1px solid var(--primary-600);
+    font-weight:normal;
+    font-size:12px;
+    border-radius:8px;
+    z-index:99999999;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    visibility:hidden;
+    opacity:0;
+    transition: opacity 250ms;
+}
+
+.nav-item:hover .tooltip-top {
+    visibility:visible;
+    opacity:1;
+}
+.tooltip-text {
+    text-align: center;
+}
+.blur {
+    mask-image: linear-gradient(to top, rgb(0, 0, 0) 25%, transparent);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: clamp(80px, 10vh, 200px);
+    bottom: 0px;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 99;
+}

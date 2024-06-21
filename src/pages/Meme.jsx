@@ -17,10 +17,10 @@ function Meme() {
     }, [])
 
     function getMemeImage() {
-        const randomMeme = Math.floor(Math.random() * allMemes.length);
+        const randomMeme = Math.floor(Math.random() * allMemes  .length);
         // Make the setter function easier by grabbing the url property of the current index (meme)
-        // inside of the allMemes. Now you can reuse it in the function.
-        const url = allMemes[randomMeme].url
+        // inside of the allMemes   . Now you can reuse it in the function.
+        const url = allMemes    [randomMeme].url
         setMeme(prevMeme => ({
             ...prevMeme,
             randomImage: url
