@@ -1,12 +1,4 @@
 :root {
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.15;
-  font-weight: 400;
-
-  /* color-scheme: light dark; */
-  color: #242424;
-  background-color: white;
-
   --white: #ffffff;
   --text-color-muted: #d4d4d8;
   --primary-900: #0F0F1A;
@@ -22,10 +14,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html {
+  scroll-behavior: smooth;
+}
 #root {
   width: 100%;
-  max-width: 1000px;
+  max-width: 700px;
   margin: 0 auto;
+  margin-top: 40px;
+  padding: 0 16px;
 }
 body {
   margin: 0;
@@ -34,23 +31,45 @@ body {
   min-height: 100vh;
   background-color: var(--primary-900);
 }
-section {
-  padding: 12px;
-}
-/* Elements */
+/* Text styles */
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+h1, h2, h3, h4, h5, h6 {
+  color: var(--white);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0 0 24px 0;
+}
+p, dl, ul, dd, label {
+  color: var(--text-color-muted);
+  font-family: "Inter", sans-serif;
+  line-height: 1.7em;
+  margin: 0;
+}
+.text-s {
+  font-size: 14px;
+  font-weight: 300;
+}
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
 }
-h2 {
-  font-size: 0.75rem;
-  font-weight: normal;
+/* Inputs */
+input[type=text], input[type=email], textarea {
+  font-family: "Inter", sans-serif;
+  color: white;
+  background-color: var(--primary-900);
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--primary-600);
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
 }
+/* Elements */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
